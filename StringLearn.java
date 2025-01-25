@@ -71,5 +71,52 @@ public class StringLearn {
         String str21 = " World";
         String concatenated = str20.concat(str21); // "Hello World"
         System.out.println(concatenated);
+
+
+        //Regular expression in string
+        String str_1 = "abcccc";
+        System.out.println("checking the first regular expression "+ str_1.matches("[abc]{3,7}"));
+
+        //challenge
+
+        String email = "programmer@gmail.com";
+
+        System.out.println("it is gmail "+email.contains("gmail"));
+        int i = email.indexOf('@');
+
+        System.out.println("user name is ----->"+email.substring(0,i));
+        System.out.println("domin name is ---->"+email.substring(i+1,email.length()));
+
+        long d = 10010010;
+        String hex = String.valueOf(d);
+
+        System.out.println("Binary of not-->"+hex.matches("[01]+"));
+
+        String hexno = "235ACD";
+        System.out.println("No hexadecial or not -->"+hexno.matches("[0-9A-F]*"));
+
+        String datea = "23/12/1999";
+        System.out.println("Date valdioatonm--->"+datea.matches("[0-3][0-9]\\[01][0-9]\\[0-9]{4}"));
+
+        //remove special character
+        //remove extra spaces
+        //count how many character
+
+        String schar = "a@b$c%f^7&8*9!";
+
+        System.out.println("remove special charatet ------>"+schar.replaceAll("[\\W]",""));
+
+        String rspace = "aaaa  asjhjfsd aa  ahagdsjhfsa   asjhdgfas    asjhgjhfasbdg";
+
+        rspace = rspace.replaceAll("[\\s+]"," ").trim();
+
+        String word[] = rspace.split("\\s");
+
+        System.out.println("total word count----->"+word.length);
+
+
+
+
+
     }
 }
